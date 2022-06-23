@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:mila/constants/color_scheme.dart';
 import 'package:mila/utility/images.dart';
@@ -11,7 +12,15 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  @override
+  playSound() async {
+    AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
+    await audioPlayer.open(
+      Audio(
+        'assets/audio/lion.mp3',
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +62,7 @@ class _HomepageState extends State<Homepage> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Container(
-                      height: 110,
+                      height: 130,
                       width: 120,
                       decoration: BoxDecoration(
                         boxShadow: [
@@ -92,7 +101,7 @@ class _HomepageState extends State<Homepage> {
                       Padding(
                         padding: const EdgeInsets.only(left: 30),
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: () => playSound(),
                             icon: Icon(
                               Icons.volume_up_outlined,
                               color: ProjectColorScheme.pink,
