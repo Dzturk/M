@@ -1,6 +1,7 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:mila/constants/color_scheme.dart';
+import 'package:mila/utility/animal_sounds.dart';
 import 'package:mila/utility/images.dart';
 import 'package:mila/widgets/homepage_widgets.dart';
 
@@ -16,10 +17,12 @@ class _HomepageState extends State<Homepage> {
     AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
     await audioPlayer.open(
       Audio(
-        'assets/audio/lion.mp3',
+        AnimalSounds.lion,
       ),
     );
   }
+
+  //! Kodu daha okunabilir ve daha fonksiyonel hale getirmem gerekiyor. Yarın artık :)
 
   @override
   Widget build(BuildContext context) {
