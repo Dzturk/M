@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class ProjectColorScheme {
-  static Color firstRed = const Color(0xFFEE4540);
-  static Color secondRed = const Color(0xFFC72C41);
-  static Color firstPink = const Color(0xFF801336);
-  static Color secondPink = const Color(0xFF510A32);
-  static Color violet = const Color(0xFF2D142C);
+  static Color main = const Color(0xFFFEF9A7);
+  static Color second = const Color(0xFFFAC213);
+  static Color darkerSecond = const Color(0xFFF77E21);
+  static Color pink = const Color(0xFFD61C4E);
 }
